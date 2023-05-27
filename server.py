@@ -1,6 +1,7 @@
 import socket
+import os
 
-HOST = 'your_ip_address'  # IP address of the server
+HOST = '0.0.0.0'  # IP address of the server
 PORT = 12345  # Port number to listen on
 
 # Create a socket object
@@ -25,6 +26,7 @@ while True:
     # Process the command
     if command == "hello":
         print("Command received: hello")
+        os.system("python sensordata.py")
         # Add your code here to perform the corresponding action for the command
 
     elif command == "quit":
