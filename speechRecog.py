@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import time
 import sounddevice
+import pyautogui
 
 # Create a recognizer instance
 r = sr.Recognizer()
@@ -25,7 +26,7 @@ try:
     # Use the default API key for Google Speech Recognition
     text = r.recognize_google(audio)
     print("Recognized Text:")
-    print(text)
+    pyautogui.typewrite(text)
 except sr.UnknownValueError:
     print("Speech recognition could not understand audio")
 except sr.RequestError as e:
