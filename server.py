@@ -28,8 +28,8 @@ while True:
     command = client_socket.recv(1024).decode()
 
     # Process the command
-    if command == "hello":
-        print("Command received: hello")
+    if command == "speech":
+        print("Command received: speech")
         r = sr.Recognizer()
 
     # Specify the audio source (e.g., microphone or audio file)
