@@ -4,6 +4,7 @@ import speech_recognition as sr
 import time
 import sounddevice
 import pyautogui
+import rpistore
 
 HOST = '0.0.0.0'  # IP address of the server
 PORT = 12345  # Port number to listen on
@@ -64,6 +65,11 @@ while True:
     elif command == "quit":
         print("Command received: quit")
         break
+
+    elif command == "sensor":
+        print("Command received: sensor, initiaing sensor")
+        sensorData = open("signal.txt", "r")
+        print(sensorData.read())
 
 # Close the client socket and server socket
 client_socket.close()
